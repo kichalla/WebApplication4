@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Blazor.Browser.Rendering;
 using Microsoft.AspNetCore.Blazor.Browser.Services;
 using System;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace WebApplication4
 {
@@ -10,7 +11,7 @@ namespace WebApplication4
         {
             var serviceProvider = new BrowserServiceProvider(configure =>
             {
-                // Add any custom services here
+                configure.AddScoped<UserVoiceRepository>();
             });
 
             new BrowserRenderer(serviceProvider).AddComponent<App>("app");

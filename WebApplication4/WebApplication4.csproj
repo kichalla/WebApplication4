@@ -13,4 +13,12 @@
     <DotNetCliToolReference Include="Microsoft.AspNetCore.Blazor.Cli" Version="0.1.0-rc2-final" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Pages\UserVoiceItemDetails.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <BlazorGenerate Remove="Pages\UserVoiceItemDetails.cshtml" />
+  </ItemGroup>
+
 </Project>

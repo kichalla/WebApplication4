@@ -1,0 +1,20 @@
+﻿<div>
+    <h4>@Model.Title</h4>
+    <div>@Model.Description</div>
+    <button @onclick(Upvote)>Upvote</button><label>@Model.Upvotes</label>
+    <button @onclick(Downvote)>Downvote</button><label>@Model.Downvotes</label>
+</div>
+
+@functions{
+    public UserVoiceItem Model { get; set; }
+
+    void Upvote()
+    {
+        Model.Upvotes++;
+    }
+
+    void Downvote()
+    {
+        Model.Downvotes++;
+    }
+}
